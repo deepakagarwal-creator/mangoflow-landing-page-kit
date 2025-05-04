@@ -1,6 +1,7 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 
 export const Footer: React.FC = () => {
   return (
@@ -32,6 +33,8 @@ export const Footer: React.FC = () => {
               </a>
             </div>
           </div>
+          
+          
           
           <div>
             <h3 className="text-white font-semibold mb-4">Product</h3>
@@ -87,6 +90,3 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
-
-// We need to add this import since we're using it in the component
-import { Input } from '@/components/ui/input';
