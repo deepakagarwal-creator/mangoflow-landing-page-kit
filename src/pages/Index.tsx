@@ -14,6 +14,14 @@ const Index: React.FC = () => {
   // Scroll to top on initial load
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // Add smooth scrolling behavior to the HTML element
+    document.documentElement.style.scrollBehavior = 'smooth';
+
+    // Clean up when component unmounts
+    return () => {
+      document.documentElement.style.scrollBehavior = '';
+    };
   }, []);
 
   return (

@@ -55,13 +55,13 @@ export const Features: React.FC = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fade-in"
+              className="bg-white rounded-xl p-8 shadow-md hover:shadow-xl hover:translate-y-[-5px] transition-all duration-150 animate-fade-in group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="inline-flex items-center justify-center p-3 bg-mango-100 rounded-lg mb-5">
-                <feature.icon className="h-6 w-6 text-mango-400" />
+              <div className="inline-flex items-center justify-center p-3 bg-mango-100 rounded-lg mb-5 group-hover:bg-mango-200 transition-colors duration-150">
+                <feature.icon className="h-6 w-6 text-mango-400 group-hover:scale-110 transition-transform duration-150" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+              <h3 className="text-xl font-semibold mb-3 group-hover:text-mango-400 transition-colors duration-150">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
             </div>
           ))}

@@ -1,11 +1,12 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 interface FAQItem {
   question: string;
@@ -36,6 +37,8 @@ const faqItems: FAQItem[] = [
 ];
 
 export const FAQ: React.FC = () => {
+  const [openItem, setOpenItem] = useState<string | null>("item-0"); // Default first item open
+
   return (
     <section id="faq" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6">
@@ -51,14 +54,28 @@ export const FAQ: React.FC = () => {
         </div>
         
         <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion 
+            type="single" 
+            collapsible 
+            className="w-full"
+            value={openItem || undefined}
+            onValueChange={(value) => setOpenItem(value)}
+          >
             {faqItems.map((item, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-gray-50">
-                  <span className="text-left font-medium">{item.question}</span>
+              <AccordionItem key={index} value={`item-${index}`} className="border-b last:border-0">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-gray-50 group">
+                  <div className="flex justify-between w-full">
+                    <span className="text-left font-medium group-hover:text-mango-400 transition-colors duration-150">{item.question}</span>
+                    <span className="ml-2 flex-shrink-0">
+                      {openItem === `item-${index}` ? 
+                        <ChevronUp className="h-5 w-5 text-mango-400 transition-transform duration-200" /> : 
+                        <ChevronDown className="h-5 w-5 transition-transform duration-200" />
+                      }
+                    </span>
+                  </div>
                 </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4">
-                  <p className="text-gray-600">{item.answer}</p>
+                <AccordionContent className="px-6 pb-4 text-gray-600 animate-accordion-down">
+                  <p>{item.answer}</p>
                 </AccordionContent>
               </AccordionItem>
             ))}
