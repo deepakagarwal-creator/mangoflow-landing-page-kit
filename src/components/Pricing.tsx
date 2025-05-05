@@ -16,7 +16,7 @@ const pricingTiers: PricingTier[] = [
   {
     name: 'Free',
     price: '$0',
-    description: 'Perfect for content creators just starting out, offering essential repurposing tools with limited outputs to help you test the platform's capabilities and see immediate results.',
+    description: 'Perfect for content creators just starting out, offering essential repurposing tools with limited outputs to help you test the platform\'s capabilities and see immediate results.',
     features: [
       '3 videos per month',
       '720p video quality',
