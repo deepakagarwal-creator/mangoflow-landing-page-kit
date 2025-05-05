@@ -16,7 +16,7 @@ const pricingTiers: PricingTier[] = [
   {
     name: 'Free',
     price: '$0',
-    description: 'Perfect for trying out MangoFlow',
+    description: 'Perfect for content creators just starting out, offering essential repurposing tools with limited outputs to help you test the platform's capabilities and see immediate results.',
     features: [
       '3 videos per month',
       '720p video quality',
@@ -29,7 +29,7 @@ const pricingTiers: PricingTier[] = [
   {
     name: 'Pro',
     price: '$29',
-    description: 'Great for creators and small teams',
+    description: 'Ideal for serious creators and small teams who need unlimited video processing, advanced AI features, and detailed analytics to scale their content strategy across platforms.',
     features: [
       'Unlimited videos',
       '4K video quality',
@@ -45,7 +45,7 @@ const pricingTiers: PricingTier[] = [
   {
     name: 'Enterprise',
     price: 'Custom',
-    description: 'For large teams with advanced needs',
+    description: 'Comprehensive solution for agencies and large teams requiring custom workflows, advanced integrations, dedicated support, and enterprise-grade security and compliance.',
     features: [
       'Everything in Pro',
       'Unlimited team members',
@@ -70,7 +70,7 @@ export const Pricing: React.FC = () => {
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Choose the perfect plan for your content needs
+            Choose the perfect content repurposing plan for your needs
           </p>
           <div className="mt-6 inline-flex items-center bg-white p-1 rounded-lg border">
             <span className="px-4 py-2 bg-mango-400 text-white rounded-md">Monthly</span>

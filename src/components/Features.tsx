@@ -10,18 +10,18 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    title: 'AI-Powered Clip Extraction',
-    description: 'Auto-trim video highlights for any platform using smart content recognition.',
+    title: 'Smart Video Clip Detection',
+    description: 'Our AI technology automatically identifies high-engagement moments in your videos, extracting the perfect clips for maximum audience impact.',
     icon: Zap
   },
   {
-    title: 'Multi-Platform Publishing',
-    description: 'One-click publishing to Instagram, TikTok, YouTube, Twitter, and LinkedIn.',
+    title: 'Multi-Platform Format Optimization',
+    description: 'Instantly resize, reformat, and optimize your content for every social platform, eliminating hours of manual editing and technical adjustments.',
     icon: Rocket
   },
   {
-    title: 'Automated Captions',
-    description: 'Generate accurate captions in multiple languages with perfect timing.',
+    title: 'Automated Captions & Translation',
+    description: 'Generate accurate captions in multiple languages with perfect timing, increasing accessibility and expanding your global reach.',
     icon: Star
   },
   {

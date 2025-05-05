@@ -22,13 +22,12 @@ export const Hero: React.FC = () => {
           <div className="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               <span className="bg-gradient-to-r from-mango-300 to-mango-400 bg-clip-text text-transparent">
-                Automate Your Content
+                Transform Long Videos
               </span>
-              <br /> Repurposing in Minutes
+              <br /> into Engaging Social Content in Minutes
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg">
-              Save hours on video clipping, captioning, and scheduling across platforms. 
-              Turn long-form videos into engaging content for all social media channels.
+              Save hours of manual editing with AI-powered content repurposing that automatically extracts, captions, and optimizes your videos for every platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 

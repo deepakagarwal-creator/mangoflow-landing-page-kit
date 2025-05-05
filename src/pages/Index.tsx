@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { Navigation } from '@/components/Navigation';
 import { Hero } from '@/components/Hero';
 import { Features } from '@/components/Features';
@@ -26,6 +27,10 @@ const Index: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>MangoFlow | AI Video Repurposing for Content Creators</title>
+        <meta name="description" content="Transform long-form videos into platform-optimized social content. Save time with AI-powered clip extraction, captioning, and multi-platform publishing." />
+      </Helmet>
       <Navigation />
       <Hero />
       <Features />
