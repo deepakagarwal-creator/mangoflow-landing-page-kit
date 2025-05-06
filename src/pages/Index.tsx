@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Navigation } from '@/components/Navigation';
 import { Hero } from '@/components/Hero';
 import { Features } from '@/components/Features';
