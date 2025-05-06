@@ -1,17 +1,23 @@
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
 export const Footer: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <footer className="bg-gray-900 text-gray-300 py-12">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <Link to="/" className="inline-block mb-6">
+            <a href="/" className="inline-block mb-6" onClick={(e) => {
+              e.preventDefault();
+              navigate('/');
+            }}>
               <span className="text-2xl font-bold text-white">MangoFlow</span>
-            </Link>
+            </a>
             <p className="mb-4 text-sm">
               Automate your content repurposing workflow and maximize your reach across all social platforms.
             </p>
@@ -33,8 +39,6 @@ export const Footer: React.FC = () => {
               </a>
             </div>
           </div>
-          
-          
           
           <div>
             <h3 className="text-white font-semibold mb-4">Product</h3>

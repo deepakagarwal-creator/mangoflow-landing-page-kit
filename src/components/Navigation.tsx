@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -24,6 +24,7 @@ export const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
+  const navigate = useNavigate();
 
   // Handle smooth scrolling on nav item click
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -93,11 +94,14 @@ export const Navigation: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center">
+            <a href="/" className="flex items-center" onClick={(e) => {
+              e.preventDefault();
+              navigate('/');
+            }}>
               <span className="text-2xl font-bold bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent transition-colors duration-200">
                 MangoFlow
               </span>
-            </Link>
+            </a>
           </div>
           
           {/* Desktop Navigation */}
@@ -119,8 +123,8 @@ export const Navigation: React.FC = () => {
               </a>
             ))}
             <Button 
-              asChild 
               className="ml-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-150 px-6 font-medium border-0"
+              asChild
             >
               <a 
                 href="#contact" 
